@@ -1,0 +1,11 @@
+server:
+    port: 8082
+spring:
+    cloud:
+        stream:
+            bindings:
+                convertToCommonModel-in-0:
+                    destination: input-queue
+                    group: bridge
+                convertToCommonModel-out-0:
+                    destination: processing-queue
